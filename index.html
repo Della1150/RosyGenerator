@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rosy Prayer and Meme Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="site-header" aria-label="Rosy Minds header">
+        <a class="brand-mark" href="index.html" aria-label="Rosy Minds home">
+          <span class="brand-icon" aria-hidden="true">RM</span>
+          <span>
+            <strong>Rosy Minds</strong>
+            <small>Prayer + Meme Studio</small>
+          </span>
+        </a>
+        <p>Faith-filled captions for soft hearts and shareable moments.</p>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Soft Christian Content Creator</p>
+          <h1 id="page-title">Rosy Prayer and Meme Generator</h1>
+          <p>
+            Create gentle prayer posts, relatable captions, devotional notes,
+            and polished ChatGPT image prompts for Facebook, Pinterest, and
+            Reels.
+          </p>
+        </div>
+      </section>
+
+      <section class="generator" aria-label="Generator form and results">
+        <form class="generator-form" id="generator-form">
+          <div class="field-group">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="anxiety">Anxiety</option>
+              <option value="grief">Grief</option>
+              <option value="hope">Hope</option>
+              <option value="motherhood">Motherhood</option>
+              <option value="healing">Healing</option>
+              <option value="morning prayer">Morning prayer</option>
+              <option value="good night prayer">Good night prayer</option>
+              <option value="emotions">Emotions</option>
+              <option value="life situations">Life situations</option>
+              <option value="seasons">Seasons</option>
+              <option value="humor">Humor</option>
+              <option value="spiritual growth">Spiritual growth</option>
+              <option value="women's struggles">Women's struggles</option>
+              <option value="encouragement">Encouragement</option>
+              <option value="viral relatable topics">Viral relatable topics</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="tone">Tone</label>
+            <select id="tone" name="tone">
+              <option value="sweet">Sweet</option>
+              <option value="funny">Funny</option>
+              <option value="inspirational">Inspirational</option>
+              <option value="sassy but Godly">Sassy but Godly</option>
+              <option value="never pet names">Never pet names</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="brand">Brand</label>
+            <select id="brand" name="brand">
+              <option value="Rosy Minds">Rosy Minds</option>
+              <option value="Rosy Revelation">Rosy Revelation</option>
+              <option value="Rosy Faith Chatter">Rosy Faith Chatter</option>
+              <option value="Rosy's Blank Canvas">Rosy's Blank Canvas</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="platformSize">Platform Size</label>
+            <select id="platformSize" name="platformSize">
+              <option value="Facebook feed 1080x1350">Facebook feed 1080x1350</option>
+              <option value="Square 1080x1080">Square 1080x1080</option>
+              <option value="Reels 1080x1920">Reels 1080x1920</option>
+              <option value="Pinterest 1000x1500">Pinterest 1000x1500</option>
+            </select>
+          </div>
+
+          <button class="generate-button" type="submit">Generate</button>
+        </form>
+
+        <div class="results" id="results" aria-live="polite">
+          <article class="result-card">
+            <div class="result-heading">
+              <h2>Viral Meme Caption</h2>
+              <button class="copy-button" type="button" data-copy="caption">
+                Copy
+              </button>
+            </div>
+            <p id="caption">Choose your options, then click Generate.</p>
+          </article>
+
+          <article class="result-card">
+            <div class="result-heading">
+              <h2>Facebook Comment Prayer</h2>
+              <button class="copy-button" type="button" data-copy="prayer">
+                Copy
+              </button>
+            </div>
+            <p id="prayer">Your longer prayer will appear here.</p>
+          </article>
+
+          <article class="result-card">
+            <div class="result-heading">
+              <h2>Devotional Paragraph</h2>
+              <button class="copy-button" type="button" data-copy="devotional">
+                Copy
+              </button>
+            </div>
+            <p id="devotional">Your devotional paragraph will appear here.</p>
+          </article>
+
+          <article class="result-card">
+            <div class="result-heading">
+              <h2>ChatGPT Image Prompt</h2>
+              <button class="copy-button" type="button" data-copy="imagePrompt">
+                Copy Prompt
+              </button>
+            </div>
+            <p class="prompt-note">
+              Paste this into your paid ChatGPT account to create the finished
+              high-quality image.
+            </p>
+            <p id="imagePrompt" class="prompt-output">
+              Choose your options, then click Generate.
+            </p>
+          </article>
+
+          <article class="result-card">
+            <div class="result-heading">
+              <h2>Hashtags</h2>
+              <button class="copy-button" type="button" data-copy="hashtags">
+                Copy
+              </button>
+            </div>
+            <p id="hashtags">Your hashtags will appear here.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
