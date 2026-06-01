@@ -91,6 +91,8 @@ If double-clicking does not work:
   - Reels 1080x1920
   - Pinterest 1000x1500
 - Local placeholder caption, prayer, devotional, and hashtag generation
+- Random caption selection by topic and tone
+- Non-repeating captions during the same app session until the available variations are used
 - Detailed ChatGPT-ready image prompt generation
 - Brand-specific image instructions:
   - Rosy Minds creates Grace, an illustrated woman with a cross necklace

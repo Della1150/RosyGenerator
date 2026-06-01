@@ -124,13 +124,164 @@ const topicDetails = {
   },
 };
 
+const captionIdeas = {
+  anxiety: [
+    "letting prayer lead when my thoughts get loud",
+    "choosing peace before panic gets the microphone",
+    "handing the racing thoughts back to Jesus",
+    "taking one holy breath at a time",
+    "remembering calm is still possible here",
+    "letting God be bigger than the spiral",
+  ],
+  grief: [
+    "letting God hold the part that still hurts",
+    "healing softly without rushing the ache",
+    "missing them and trusting God in the same breath",
+    "finding comfort in small mercies",
+    "letting tears become prayers",
+    "being carried through the tender places",
+  ],
+  hope: [
+    "watching hope bloom again",
+    "believing this story still has light",
+    "trusting God with the next chapter",
+    "letting faith rise after disappointment",
+    "looking for grace in the middle",
+    "holding onto holy possibility",
+  ],
+  motherhood: [
+    "running on grace and reheated coffee",
+    "mothering with prayer in the messy middle",
+    "finding Jesus between snacks and laundry",
+    "needing patience, wisdom, and a quiet minute",
+    "being held while holding everyone else",
+    "letting grace cover the unfinished list",
+  ],
+  healing: [
+    "letting healing be slow and sacred",
+    "becoming whole one prayer at a time",
+    "trusting God with the tender work",
+    "making peace with progress that takes time",
+    "letting restoration start quietly",
+    "choosing softness after survival",
+  ],
+  "morning prayer": [
+    "starting the day with Jesus first",
+    "giving God the morning before the noise",
+    "covering the day in prayer and grace",
+    "choosing peace before the calendar starts",
+    "asking for wisdom before the coffee cools",
+    "letting the first thought be faith",
+  ],
+  "good night prayer": [
+    "letting God carry what I cannot fix tonight",
+    "closing the day with peace instead of pressure",
+    "resting because God is still awake",
+    "putting the worries down before bed",
+    "ending the day in grace",
+    "sleeping under mercy, not overthinking",
+  ],
+  emotions: [
+    "bringing the big feelings to a bigger God",
+    "letting emotions meet truth gently",
+    "feeling deeply without losing faith",
+    "making room for honesty and peace",
+    "letting God sort the heart noise",
+    "giving every feeling somewhere holy to land",
+  ],
+  "life situations": [
+    "trusting God in the part I did not plan",
+    "taking the next right step with grace",
+    "letting faith steady the unknown",
+    "remembering God is not confused by this",
+    "finding peace in the middle of real life",
+    "choosing wisdom over worry",
+  ],
+  seasons: [
+    "entering a new season with the same faithful God",
+    "letting this season grow something good",
+    "trusting the timing of what is blooming",
+    "learning grace in the season I am in",
+    "making peace with change",
+    "believing every season can still be holy",
+  ],
+  humor: [
+    "making plans while God lovingly supervises",
+    "trying to be holy before the coffee works",
+    "praying first because my attitude has notes",
+    "letting Jesus handle the plot twist",
+    "being sanctified one minor inconvenience at a time",
+    "choosing grace with a side of dramatic sigh",
+  ],
+  "spiritual growth": [
+    "growing even when it is not glamorous",
+    "letting God mature what comfort cannot",
+    "choosing obedience over old patterns",
+    "becoming rooted instead of rushed",
+    "learning faith in hidden places",
+    "letting growth be quiet but real",
+  ],
+  "women's struggles": [
+    "being tired, healing, praying, and still becoming",
+    "letting God see what everyone else misses",
+    "carrying less shame and more grace",
+    "standing strong with a soft heart",
+    "being held through the private battles",
+    "finding courage in the unseen places",
+  ],
+  encouragement: [
+    "remembering I am not behind, I am being held",
+    "taking heart because God is still near",
+    "letting one small truth light the way",
+    "choosing courage for the next step",
+    "receiving grace for this exact day",
+    "believing there is still good ahead",
+  ],
+  "viral relatable topics": [
+    "trying to be peaceful, hydrated, healed, and holy",
+    "needing grace before noon",
+    "balancing faith, feelings, and fifty tabs open",
+    "being a work in progress with a full schedule",
+    "praying through the plot twists",
+    "trying to act delivered in public",
+  ],
+};
+
 const toneLines = {
   sweet: "gentle, tender, warm, and comforting",
   funny: "lighthearted, witty, warm, and relatable",
   inspirational: "uplifting, polished, hope-filled, and emotionally moving",
   "sassy but Godly": "bold, witty, expressive, faith-filled, and never harsh",
-  "never pet names": "respectful, clear, warm, and never using pet names",
 };
+
+const toneCaptionFormats = {
+  sweet: [
+    (idea) => `Today I am ${idea}.`,
+    (idea) => `A gentle reminder: there is grace for ${idea}.`,
+    (idea) => `Soft hearts can still be strong while they are ${idea}.`,
+    (idea) => `God is near while I am ${idea}.`,
+  ],
+  funny: [
+    (idea) => `Me, currently ${idea}, but making it prayerful.`,
+    (idea) => `Today's agenda: ${idea}, preferably with coffee.`,
+    (idea) => `Trying my best at ${idea}, and yes, Jesus is invited.`,
+    (idea) => `If you see me ${idea}, mind your business and pray for me.`,
+  ],
+  inspirational: [
+    (idea) => `This is your reminder: ${idea} is still a holy step forward.`,
+    (idea) => `Keep going. God can meet you while you are ${idea}.`,
+    (idea) => `Faith grows in moments like this: ${idea}.`,
+    (idea) => `Do not give up. There is purpose in ${idea}.`,
+  ],
+  "sassy but Godly": [
+    (idea) => `I am ${idea}, and the enemy can take several seats.`,
+    (idea) => `Plot twist: ${idea}, but God still gets the final word.`,
+    (idea) => `Currently ${idea}, but doing it covered in grace.`,
+    (idea) => `I said what I said: ${idea}, with prayer and boundaries.`,
+  ],
+};
+
+const usedCaptionsByTopicTone = {};
 
 const brandRules = {
   "Rosy Minds": `Create a soft, attractive animated/illustrated woman named Grace. She is approximately 45 years old, warm and encouraging, attractive but modest, and always wearing a visible cross necklace. Give Grace a fresh pose, expression, outfit, and setting. The artwork should feel comforting, feminine, faith-centered, and professionally illustrated.`,
@@ -159,6 +310,35 @@ function buildHashtags(topic, details) {
   const topicTag = titleCase(cleanedTopic).replace(/\s/g, "");
   const allTags = [...details.tags, topicTag, ...sharedHashtags];
   return allTags.slice(0, 10).map((tag) => `#${tag}`).join(" ");
+}
+
+function shuffle(items) {
+  return [...items].sort(() => Math.random() - 0.5);
+}
+
+function buildCaptionCandidates(topic, tone) {
+  const ideas = captionIdeas[topic] || [topicDetails[topic].caption];
+  const formats = toneCaptionFormats[tone] || toneCaptionFormats.sweet;
+
+  return ideas.flatMap((idea) => formats.map((format) => format(idea)));
+}
+
+function getUniqueCaption(topic, tone) {
+  const key = `${topic}-${tone}`;
+  const candidates = buildCaptionCandidates(topic, tone);
+  const used = usedCaptionsByTopicTone[key] || [];
+  let available = candidates.filter((caption) => !used.includes(caption));
+
+  if (available.length === 0) {
+    const lastCaption = used[used.length - 1];
+    usedCaptionsByTopicTone[key] = lastCaption ? [lastCaption] : [];
+    available = candidates.filter((caption) => caption !== lastCaption);
+  }
+
+  const caption = shuffle(available)[0] || shuffle(candidates)[0];
+  usedCaptionsByTopicTone[key] = [...(usedCaptionsByTopicTone[key] || []), caption];
+
+  return caption;
 }
 
 function getSeasonInfo(date = new Date()) {
@@ -197,6 +377,11 @@ Tone:
 Main caption to place on the image:
 "${caption}"
 
+Caption uniqueness instruction:
+- This caption was selected as a fresh variation for the chosen topic and tone.
+- If ChatGPT rewrites or improves the wording, create a completely new caption with different wording, angle, emotional hook, and tone.
+- Do not reuse the same caption structure from a previous image.
+
 Visual direction:
 - ${details.scene}
 - Make the artwork seasonal and holiday-aware for ${season}.
@@ -230,7 +415,7 @@ Quality rules:
 function generateContent(topic, tone, brand, platformSize) {
   const details = topicDetails[topic];
   const toneDescription = toneLines[tone];
-  const caption = details.caption;
+  const caption = getUniqueCaption(topic, tone);
 
   return {
     caption,
