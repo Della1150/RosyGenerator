@@ -74,7 +74,7 @@ const moments=[
 const quizzes=[
 ["Who built the ark?",["Moses","Noah","David"],1,"Noah obeyed God and built the ark."],
 ["Jesus was born in which town?",["Bethlehem","Jericho","Nazareth"],0,"Jesus was born in Bethlehem."],
-["Who defeated Goliath?",["Peter","David","Joshua"],1,"David trusted God and faced Goliath."],
+["Who defeated Goliath?",["Peter","David","Joshua"],1,"David trusted God and defeated Goliath."],
 ["How many disciples did Jesus choose?",["7","10","12"],2,"Jesus chose twelve disciples."],
 ["Who was swallowed by a great fish?",["Jonah","Joseph","Samuel"],0,"Jonah spent three days inside the great fish."],
 ["What did Jesus calm?",["A storm","A volcano","An earthquake"],0,"Jesus spoke, and the storm became calm."],
@@ -82,8 +82,26 @@ const quizzes=[
 ["What is the first book of the Bible?",["Psalms","Genesis","Matthew"],1,"Genesis is the first book of the Bible."],
 ["Who was Jesus' mother?",["Ruth","Martha","Mary"],2,"Mary was chosen to be Jesus' earthly mother."],
 ["What did Jesus multiply to feed a crowd?",["Bread and fish","Grapes and grain","Figs and honey"],0,"Jesus multiplied loaves and fish."],
-["Who climbed a tree to see Jesus?",["Zacchaeus","Barnabas","Thomas"],0,"Zacchaeus climbed a sycamore tree."],
-["Which disciple walked on water toward Jesus?",["John","Peter","Andrew"],1,"Peter stepped out of the boat toward Jesus."]
+["Who climbed a tree to see Jesus?",["Zacchaeus","Barnabas","Thomas"],0,"Zacchaeus climbed a sycamore tree to see Jesus."],
+["Which disciple walked on water toward Jesus?",["John","Peter","Andrew"],1,"Peter stepped out of the boat toward Jesus."],
+["Who led the Israelites into the Promised Land?",["Joshua","Aaron","Samuel"],0,"Joshua led the Israelites into the Promised Land."],
+["Who interpreted Pharaoh's dreams in Egypt?",["Joseph","Isaac","Nehemiah"],0,"God gave Joseph wisdom to interpret Pharaoh's dreams."],
+["Who was the first king of Israel?",["David","Saul","Solomon"],1,"Saul was Israel's first king."],
+["Which queen courageously helped save her people?",["Esther","Jezebel","Sheba"],0,"Queen Esther courageously spoke up for her people."],
+["Who was thrown into a lions' den?",["Daniel","Elijah","Timothy"],0,"God protected Daniel in the lions' den."],
+["Which disciple denied knowing Jesus three times?",["Peter","Philip","James"],0,"Peter denied Jesus three times and was later lovingly restored."],
+["Who baptized Jesus?",["John the Baptist","Matthew","Nicodemus"],0,"John the Baptist baptized Jesus in the Jordan River."],
+["What is the final book of the Bible?",["Acts","Jude","Revelation"],2,"Revelation is the final book of the Bible."],
+["Who wrote many of the Psalms?",["David","Luke","Abraham"],0,"King David wrote many of the Psalms."],
+["What did God create on the first day?",["Animals","Light","The sun"],1,"God said, 'Let there be light.'"],
+["How many days and nights did rain fall during the flood?",["7","30","40"],2,"Rain fell for forty days and forty nights."],
+["What was Paul's name before he was called Paul?",["Saul","Silas","Simon"],0,"Paul was formerly known as Saul."],
+["Who was Ruth's mother-in-law?",["Naomi","Deborah","Hannah"],0,"Ruth faithfully stayed with Naomi."],
+["Which king was especially known for wisdom?",["Solomon","Ahab","Herod"],0,"God gave King Solomon remarkable wisdom."],
+["On what mountain did Moses receive the Ten Commandments?",["Mount Carmel","Mount Sinai","Mount Zion"],1,"Moses received the commandments on Mount Sinai."],
+["Who was Jesus' earthly father?",["Joseph","Zechariah","Andrew"],0,"Joseph cared for Jesus as His earthly father."],
+["What animal did Jesus ride into Jerusalem?",["A horse","A camel","A donkey"],2,"Jesus entered Jerusalem riding on a donkey."],
+["Who helped carry Jesus' cross?",["Simon of Cyrene","Bartholomew","Stephen"],0,"Simon of Cyrene was made to carry Jesus' cross."]
 ];
 const storageKey="rosyMindsGardenV1";let state=load();let selected=null;let answered=false;let currentIndex=dayIndex();
 function load(){try{return JSON.parse(localStorage.getItem(storageKey))||{completed:[],unlocked:[]}}catch(e){return{completed:[],unlocked:[]}}}
