@@ -1,9 +1,7 @@
-const CACHE_NAME = "rosy-minds-garden-v1";
+const CACHE_NAME = "rosy-minds-garden-v3";
 const APP_FILES = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
   "./manifest.webmanifest",
   "./assets/icon.svg"
 ];
@@ -30,7 +28,7 @@ self.addEventListener("fetch", event => {
         const copy = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         return response;
-      }).catch(() => caches.match("./index.html"));
+      }).catch(() => event.request.mode === "navigate" ? caches.match("./index.html") : Response.error());
     })
   );
 });
