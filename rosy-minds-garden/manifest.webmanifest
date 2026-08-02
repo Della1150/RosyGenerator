@@ -1,0 +1,20 @@
+{
+  "name": "ROSY MINDS GARDEN: A Daily Moment with Jesus",
+  "short_name": "Rosy Garden",
+  "description": "A gentle daily moment with Jesus. Read a promise, answer a Bible question, and grow a beautiful faith garden.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffaf3",
+  "theme_color": "#8f4f6f",
+  "categories": ["lifestyle", "education"],
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
