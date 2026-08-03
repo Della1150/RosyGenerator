@@ -1,4 +1,4 @@
-const CACHE_NAME = "rosy-minds-garden-v4";
+const CACHE_NAME = "rosy-minds-garden-v5";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -48,6 +48,12 @@ self.addEventListener("fetch", event => {
 
   if (event.request.mode === "navigate") {
     event.respondWith((async () => {
+      const requestedUrl = new URL(event.request.url);
+      if (requestedUrl.searchParams.get("preview") === "30") {
+        requestedUrl.searchParams.delete("preview");
+        return Response.redirect(requestedUrl.toString(), 302);
+      }
+
       try {
         const response = await fetch(event.request, { cache: "no-store" });
         return patchedHtmlResponse(response);
