@@ -1,44 +1,33 @@
 (() => {
   const ROSY_MINDS_PAGE = "https://www.facebook.com/p/Rosy-Minds-100090055060602/";
 
-  function leavePreviewMode() {
+  function cleanPreviewParameter() {
     const url = new URL(window.location.href);
-    if (url.searchParams.get("preview") !== "30") return false;
-
+    if (!url.searchParams.has("preview")) return;
     url.searchParams.delete("preview");
-    const cleanUrl = `${url.pathname}${url.search}${url.hash}`;
-    window.location.replace(cleanUrl);
-    return true;
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   }
 
-  if (leavePreviewMode()) return;
+  function connectFacebookButton() {
+    const currentButton = document.getElementById("shareButton");
+    if (!currentButton) return;
 
-  function updateFacebookSection() {
-    const section = document.querySelector(".panel.share");
-    const button = document.getElementById("share");
-    if (!section || !button) return;
-
-    const heading = section.querySelector("h2");
-    const description = section.querySelector("div > p:last-of-type");
-
-    if (heading) heading.textContent = "Visit Rosy Minds on Facebook.";
-    if (description) {
-      description.textContent = "Open the official Rosy Minds Facebook Page for daily encouragement, prayers, and new garden updates.";
-    }
-
-    button.textContent = "↗ Open Rosy Minds Facebook Page";
-    button.setAttribute("aria-label", "Open the official Rosy Minds Facebook Page");
-    button.onclick = () => {
-      window.open(ROSY_MINDS_PAGE, "_blank", "noopener,noreferrer");
-    };
-
-    const status = document.getElementById("status");
-    if (status) status.textContent = "This button opens the official Rosy Minds Facebook Page.";
+    const replacement = currentButton.cloneNode(true);
+    replacement.textContent = "↗ Open Rosy Minds Facebook Page";
+    replacement.setAttribute("aria-label", "Open the official Rosy Minds Facebook Page");
+    replacement.addEventListener("click", () => {
+      const status = document.getElementById("shareStatus");
+      if (status) status.textContent = "Opening the official Rosy Minds Facebook Page…";
+      window.location.assign(ROSY_MINDS_PAGE);
+    });
+    currentButton.replaceWith(replacement);
   }
+
+  cleanPreviewParameter();
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", updateFacebookSection, { once: true });
+    document.addEventListener("DOMContentLoaded", connectFacebookButton, { once: true });
   } else {
-    updateFacebookSection();
+    connectFacebookButton();
   }
 })();
