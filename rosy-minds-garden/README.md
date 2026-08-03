@@ -14,23 +14,17 @@ This folder contains the finished first release of a free, installable, Jesus-ce
 - 30 collectible blessings
 - Milestone rewards: butterflies at 7, a fountain at 14, a sparrow at 21, and a chapel at 30
 - Device-only progress using local storage
-- Sharing through the phone's native share menu when supported
+- Direct link to the official Rosy Minds Facebook Page
 - Offline support after the first successful visit
 - No login, advertising, database, analytics, or paid API
 
-## Public GitHub Pages paths
+## Public GitHub Pages path
 
-When GitHub Pages is enabled for the `main` branch and repository root:
-
-Regular follower app:
+When GitHub Pages is enabled for the `main` branch and repository root, the follower app is available at:
 
 `https://della1150.github.io/RosyGenerator/rosy-minds-garden/`
 
-Verified 30-day app state for review:
-
-`https://della1150.github.io/RosyGenerator/rosy-minds-garden/?preview=30`
-
-The 30-day preview is produced by the actual app code. It does not alter the visitor's saved personal garden.
+Only this regular address should be shared. The public 30-day preview parameter has been disabled so every visitor sees only the progress saved on her own device.
 
 ## Privacy
 
