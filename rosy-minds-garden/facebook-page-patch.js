@@ -1,6 +1,18 @@
 (() => {
   const ROSY_MINDS_PAGE = "https://www.facebook.com/p/Rosy-Minds-100090055060602/";
 
+  function leavePreviewMode() {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("preview") !== "30") return false;
+
+    url.searchParams.delete("preview");
+    const cleanUrl = `${url.pathname}${url.search}${url.hash}`;
+    window.location.replace(cleanUrl);
+    return true;
+  }
+
+  if (leavePreviewMode()) return;
+
   function updateFacebookSection() {
     const section = document.querySelector(".panel.share");
     const button = document.getElementById("share");
