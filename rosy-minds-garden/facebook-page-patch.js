@@ -42,7 +42,6 @@
       ...validCollected(legacy.collected)
     ])];
 
-    // Every completed day must unlock one blessing and place one flower in the garden.
     const unlockedCount = Math.min(30, Math.max(completed.length, savedCollected.length));
     const collected = Array.from({ length: unlockedCount }, (_, index) => index);
 
@@ -69,22 +68,66 @@
     return true;
   }
 
-  function installDirectFacebookLink() {
-    const button = document.getElementById("shareButton");
-    if (!button) return;
+  function restoreShareAndFacebookOptions() {
+    const section = document.querySelector(".share-panel");
+    const shareButton = document.getElementById("shareButton");
+    if (!section || !shareButton) return;
 
-    const link = document.createElement("a");
-    link.className = button.className;
-    link.href = FACEBOOK_PAGE;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", "Open the official Rosy Minds Facebook Page");
-    link.style.display = "inline-flex";
-    link.style.alignItems = "center";
-    link.style.justifyContent = "center";
-    link.style.textDecoration = "none";
-    link.innerHTML = '<span aria-hidden="true">↗</span>&nbsp; Open Rosy Minds Facebook Page';
-    button.replaceWith(link);
+    const eyebrow = section.querySelector(".eyebrow");
+    const heading = section.querySelector("h2");
+    const description = section.querySelector("div > p:not(.eyebrow)");
+
+    if (eyebrow) eyebrow.textContent = "SHARE THE JOY";
+    if (heading) heading.textContent = "Share the garden and stay connected.";
+    if (description) {
+      description.textContent = "Send ROSY MINDS GARDEN to a friend, or visit the official Rosy Minds Facebook Page for daily encouragement.";
+    }
+
+    shareButton.innerHTML = '<span aria-hidden="true">↗</span> Share Rosy Minds Garden';
+    shareButton.setAttribute("aria-label", "Share Rosy Minds Garden with a friend");
+
+    let actions = section.querySelector(".rosy-share-actions");
+    if (!actions) {
+      actions = document.createElement("div");
+      actions.className = "rosy-share-actions";
+      actions.style.display = "grid";
+      actions.style.gap = "10px";
+      actions.style.alignItems = "start";
+      shareButton.parentNode.insertBefore(actions, shareButton);
+      actions.appendChild(shareButton);
+    }
+
+    if (!document.getElementById("rosyFacebookPageLink")) {
+      const facebookLink = document.createElement("a");
+      facebookLink.id = "rosyFacebookPageLink";
+      facebookLink.className = "secondary-button";
+      facebookLink.href = FACEBOOK_PAGE;
+      facebookLink.target = "_blank";
+      facebookLink.rel = "noopener noreferrer";
+      facebookLink.setAttribute("aria-label", "Open the official Rosy Minds Facebook Page");
+      facebookLink.style.display = "inline-flex";
+      facebookLink.style.alignItems = "center";
+      facebookLink.style.justifyContent = "center";
+      facebookLink.style.textDecoration = "none";
+      facebookLink.innerHTML = '<span aria-hidden="true">f</span>&nbsp; Visit Rosy Minds Facebook Page';
+      actions.appendChild(facebookLink);
+    }
+
+    let instructions = document.getElementById("shareInstructions");
+    if (!instructions) {
+      instructions = document.createElement("div");
+      instructions.id = "shareInstructions";
+      instructions.style.gridColumn = "1 / -1";
+      instructions.style.marginTop = "2px";
+      instructions.style.padding = "13px 15px";
+      instructions.style.borderRadius = "15px";
+      instructions.style.background = "rgba(248,232,238,.65)";
+      instructions.style.color = "#726772";
+      instructions.style.fontSize = ".82rem";
+      instructions.style.lineHeight = "1.55";
+      instructions.innerHTML = '<strong style="color:#6f3652">How to share:</strong> Tap <strong>Share Rosy Minds Garden</strong>, then choose Facebook, Messages, Mail, or Copy. On iPhone, followers can open the garden in Safari, tap the Share icon, and choose <strong>Add to Home Screen</strong>.';
+      section.appendChild(instructions);
+    }
   }
 
   const repaired = repairSavedProgress();
@@ -95,8 +138,8 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", installDirectFacebookLink, { once: true });
+    document.addEventListener("DOMContentLoaded", restoreShareAndFacebookOptions, { once: true });
   } else {
-    installDirectFacebookLink();
+    restoreShareAndFacebookOptions();
   }
 })();
