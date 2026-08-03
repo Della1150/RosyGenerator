@@ -1,4 +1,4 @@
-const CACHE_NAME = "rosy-minds-garden-v7";
+const CACHE_NAME = "rosy-minds-garden-v8";
 const APP_SHELL = [
   "./",
   "./index.html",
