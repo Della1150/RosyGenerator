@@ -1,78 +1,222 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#8f4f6f">
-<meta name="description" content="ROSY MINDS GARDEN: A Daily Moment with Jesus">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<title>ROSY MINDS GARDEN: A Daily Moment with Jesus</title>
-<style>
-:root{--rose:#8f4f6f;--deep:#63354d;--pink:#f7dce6;--cream:#fffaf2;--sage:#668a72;--sage2:#e9f3ea;--gold:#c3923d;--ink:#423942;--muted:#726670;--shadow:0 18px 45px rgba(82,53,72,.12)}*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:ui-rounded,"Avenir Next",Avenir,"Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 10% 4%,#fff0c8 0,transparent 25rem),radial-gradient(circle at 90% 12%,#f2d6e2 0,transparent 28rem),linear-gradient(#fffaf3,#f8edf2 50%,#edf5ee);min-height:100vh}button{font:inherit}.shell{width:min(1080px,calc(100% - 24px));margin:auto}.top{padding:20px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:12px}.mark{width:56px;height:56px;display:grid;place-items:center;border-radius:20px 20px 20px 7px;background:linear-gradient(145deg,#fff,#f7dce6);box-shadow:var(--shadow);font-size:31px}.eyebrow{margin:0 0 5px;color:var(--rose);font-size:.7rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.brand h1{margin:0;color:var(--deep);font:700 clamp(1.5rem,5vw,2.15rem)/.95 Georgia,serif;letter-spacing:.1em}.tag{margin:5px 0 0;color:var(--muted);font:italic .9rem Georgia,serif}.install,.secondary,.primary,.petal,.answer{border:0;cursor:pointer}.install,.secondary{padding:12px 17px;border-radius:999px;color:var(--deep);background:#f8e8ee;font-weight:900}.panel{position:relative;margin:16px 0;padding:clamp(20px,4vw,33px);border:1px solid rgba(143,79,111,.1);border-radius:28px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);overflow:hidden}.panel:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#e4a9bd,#e8c882,#c9bfdf,#b9d0c0)}.welcome{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(248,232,238,.93))}.date{margin:0 0 8px;color:#4d6c5b;font-weight:800}.welcome h2,.section h2{margin:0;color:var(--deep);font:700 clamp(1.45rem,4.6vw,2.25rem)/1.12 Georgia,serif}.welcome>div>p:last-child{max-width:650px;color:var(--muted);line-height:1.65}.badge{min-width:112px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 30% 28%,#fff 0 23%,transparent 24%),linear-gradient(145deg,#f8e8ee,#f0ecf8);box-shadow:inset 0 0 0 7px rgba(255,255,255,.7),0 8px 24px rgba(82,53,72,.1)}.badge strong{display:block;color:var(--deep);font:700 2.35rem/1 Georgia,serif}.badge span{display:block;margin-top:3px;color:var(--muted);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px}.level,.done{flex:none;padding:9px 13px;border-radius:999px;color:#4d6c5b;background:#eef5ef;font-size:.78rem;font-weight:900}.garden{position:relative;height:clamp(350px,55vw,500px);min-height:350px;border:6px solid rgba(255,255,255,.9);border-radius:27px;overflow:hidden;background:linear-gradient(#d7edf4 0 45%,#a9caa9 46% 100%);box-shadow:inset 0 0 0 1px rgba(77,108,91,.15)}.sun{position:absolute;right:10%;top:35px;width:60px;height:60px;border-radius:50%;background:#ffe7a8;box-shadow:0 0 45px 16px rgba(255,231,168,.42)}.hill1,.hill2{position:absolute;left:-10%;width:120%;border-radius:50% 50% 0 0}.hill1{bottom:21%;height:40%;background:linear-gradient(160deg,#99bb9a,#72a17c)}.hill2{bottom:-20%;height:55%;background:linear-gradient(160deg,#82aa86,#568466)}.path{position:absolute;z-index:3;left:42%;bottom:-10%;width:23%;height:60%;border-radius:50% 50% 0 0;background:linear-gradient(120deg,#ecd8bb,#d4b590);transform:perspective(260px) rotateX(22deg) skewX(-6deg)}.chapel{position:absolute;z-index:5;left:52%;bottom:34%;width:124px;height:148px;transform:translateX(-50%) scale(.1);transform-origin:center bottom;opacity:0;transition:.7s}.chapel.on{transform:translateX(-50%) scale(1);opacity:1}.roof{position:absolute;top:17px;left:1px;width:121px;height:58px;background:#8a5265;clip-path:polygon(50% 0,100% 100%,0 100%);filter:drop-shadow(0 5px 4px rgba(54,39,48,.16))}.roof:before{content:"✝";position:absolute;left:50%;top:-31px;color:var(--gold);font-size:28px;transform:translateX(-50%)}.church{position:absolute;left:18px;bottom:0;width:88px;height:90px;border-radius:4px 4px 8px 8px;background:#fff8eb;box-shadow:0 8px 18px rgba(54,39,48,.15)}.window{position:absolute;left:50%;top:13px;width:28px;height:35px;border-radius:16px 16px 5px 5px;background:linear-gradient(135deg,#b96d8d,#6f648f,#e8c882);transform:translateX(-50%)}.door{position:absolute;left:50%;bottom:0;width:24px;height:36px;border-radius:12px 12px 0 0;background:#76533f;transform:translateX(-50%)}.fountain{position:absolute;z-index:7;left:23%;bottom:23%;font-size:63px;opacity:0;transform:translateY(15px);transition:.55s}.fountain.on{opacity:1;transform:none}.butterfly,.bird{position:absolute;z-index:9;opacity:0;transition:.5s;font-size:29px}.butterfly.on,.bird.on{opacity:1}.b1{left:15%;top:30%;animation:float 3s ease-in-out infinite}.b2{right:15%;top:24%;animation:float2 3.5s ease-in-out infinite}.bird{right:8%;bottom:30%;font-size:31px;animation:bob 2.2s ease-in-out infinite}.flowers{position:absolute;z-index:10;inset:0;pointer-events:none}.flower{position:absolute;font-size:clamp(24px,5vw,40px);filter:drop-shadow(0 4px 3px rgba(65,57,50,.18));animation:bloom .65s ease both}.message{position:absolute;z-index:12;left:50%;bottom:12px;transform:translateX(-50%);max-width:92%;padding:9px 14px;border-radius:999px;color:#4d6c5b;background:rgba(255,255,255,.9);font-size:.76rem;font-weight:900;text-align:center;white-space:nowrap}.progresscopy{display:flex;justify-content:space-between;gap:12px;margin:15px 2px 8px;color:var(--muted);font-size:.78rem;font-weight:800}.track{height:11px;border-radius:999px;background:#f1e2e7;overflow:hidden}.fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#668a72,#a4c78f,#c3923d);transition:.7s}.petals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.petal{min-height:118px;padding:15px;border:2px solid #eadde3;border-radius:22px;color:var(--deep);background:linear-gradient(145deg,#fff,#fff7f9);font-weight:900;box-shadow:0 8px 20px rgba(82,53,72,.08);transition:.18s}.petal:hover{transform:translateY(-3px)}.petal span:first-child{display:block;font-size:2.7rem;margin-bottom:6px}.moment{display:grid;gap:14px;margin-top:18px}.card{padding:20px;border:1px solid rgba(143,79,111,.12);border-radius:20px;background:#fff}.promise{background:linear-gradient(135deg,#fff,#fff1f5)}.topline{display:flex;justify-content:space-between;gap:14px;color:var(--rose);font-size:.78rem;font-weight:900}.card h3{margin:10px 0 8px;color:var(--deep);font:700 1.35rem/1.25 Georgia,serif}.card p{margin:7px 0;line-height:1.62}.verse{font-style:italic;font-size:1.08rem}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.answers{display:grid;gap:9px;margin-top:13px}.answer{padding:13px 15px;border:2px solid #e6dde8;border-radius:14px;color:var(--ink);background:#fff;text-align:left}.answer.correct{border-color:#7dac87;background:#edf8ef}.answer.wrong{border-color:#d79aaa;background:#fff0f3}.feedback{min-height:1.2em;margin-top:11px;color:#4d6c5b;font-weight:700}.primary{width:100%;min-height:55px;padding:15px 22px;border-radius:999px;color:#fff;background:linear-gradient(135deg,var(--rose),#b96d8d);font-weight:900;box-shadow:0 10px 22px rgba(143,79,111,.25)}.primary:disabled{opacity:.42;cursor:not-allowed;box-shadow:none}.hint{text-align:center;color:var(--muted);font-size:.78rem}.complete{text-align:center;padding:17px}.complete .big{font-size:4.4rem}.complete h3{margin:0;color:var(--deep);font:700 1.55rem Georgia,serif}.complete p{color:var(--muted);line-height:1.6}.collection{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}.token{position:relative;aspect-ratio:1;display:grid;place-items:center;border-radius:15px;background:#f1ebed;color:#c8bec2;font-size:.78rem;font-weight:900}.token.on{background:linear-gradient(145deg,#fff,#f8e8ee);color:var(--deep);box-shadow:0 7px 18px rgba(82,53,72,.1);font-size:1.45rem}.token small{position:absolute;right:5px;bottom:4px;font-size:.52rem;color:#796a72}.share{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}.share p{color:var(--muted);line-height:1.6}.about summary{cursor:pointer;color:var(--deep);font:700 1.15rem Georgia,serif}.about div{padding-top:10px;color:var(--muted);line-height:1.65}.reset{border:0;background:none;color:var(--rose);text-decoration:underline;cursor:pointer}.modal{position:fixed;z-index:100;inset:0;display:grid;place-items:center;padding:18px}.backdrop{position:absolute;inset:0;background:rgba(43,34,41,.58);backdrop-filter:blur(7px)}.modalcard{position:relative;z-index:1;width:min(450px,100%);padding:32px 25px 25px;border:7px solid rgba(255,255,255,.8);border-radius:30px;background:linear-gradient(160deg,#fff,#f8e8ee);box-shadow:0 30px 70px rgba(43,34,41,.3);text-align:center}.close{position:absolute;right:12px;top:10px;border:0;background:none;color:var(--deep);font-size:1.7rem;cursor:pointer}.reward{font-size:5rem}.modalcard h2{margin:4px 0 10px;color:var(--deep);font:700 2rem Georgia,serif}.modalcard p{color:var(--muted);line-height:1.6}.modalcard button{margin-top:8px}.status{min-height:1.2em;color:#4d6c5b;font-size:.82rem}footer{padding:10px 20px 35px;text-align:center;color:var(--muted)}footer strong{color:var(--deep);font-size:.7rem;letter-spacing:.18em}@keyframes bloom{from{opacity:0;transform:translateY(30px) scale(.2)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translate(24px,-16px)}}@keyframes float2{50%{transform:translate(-26px,-13px)}}@keyframes bob{50%{transform:translateY(-8px)}}
-@media(max-width:760px){.install{width:48px;height:48px;padding:0;overflow:hidden;font-size:0}.install:before{content:"＋";font-size:1.45rem}.welcome,.share{grid-template-columns:1fr}.badge{justify-self:start;min-width:102px}.collection{grid-template-columns:repeat(6,1fr)}.twocol{grid-template-columns:1fr}}
-@media(max-width:520px){.shell{width:min(100% - 16px,1080px)}.panel{margin:11px 0;padding:19px 15px;border-radius:23px}.head{display:block}.level,.done{display:inline-block;margin-top:10px}.garden{min-height:365px;border-width:5px}.petals{gap:7px}.petal{min-height:110px;padding:11px 4px}.collection{grid-template-columns:repeat(5,1fr)}.progresscopy{flex-direction:column;gap:4px}.message{font-size:.66rem}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#8f4f6f" />
+  <meta name="description" content="A gentle daily moment with Jesus. Read a promise, answer a Bible question, and grow a beautiful faith garden." />
+  <title>ROSY MINDS GARDEN: A Daily Moment with Jesus</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="shell top"><div class="brand"><div class="mark">🌹</div><div><p class="eyebrow">ROSY MINDS</p><h1>GARDEN</h1><p class="tag">A Daily Moment with Jesus</p></div></div><button class="install" id="install">Add to Home Screen</button></header>
-<main class="shell">
-<section class="panel welcome"><div><p class="date" id="date"></p><h2>Welcome to your quiet garden.</h2><p>Spend one joyful minute with Jesus, collect a new blessing, and watch your garden grow.</p></div><div class="badge"><div><strong id="days">0</strong><span>days tended</span></div></div></section>
-<section class="panel section"><div class="head"><div><p class="eyebrow">YOUR FAITH GARDEN</p><h2>Every small visit helps something bloom.</h2></div><span class="level" id="level">Seedling Garden</span></div><div class="garden" id="garden"><div class="sun"></div><div class="hill1"></div><div class="hill2"></div><div class="path"></div><div class="chapel" id="chapel"><div class="roof"></div><div class="church"><div class="window"></div><div class="door"></div></div></div><div class="fountain" id="fountain">⛲</div><div class="butterfly b1" id="b1">🦋</div><div class="butterfly b2" id="b2">🦋</div><div class="bird" id="bird">🐦</div><div class="flowers" id="flowers"></div><div class="message" id="message">Your first flower is waiting.</div></div><div class="progresscopy"><span><strong id="count">0</strong> of 30 blessings collected</span><span id="next">Next: Grace butterflies at 7</span></div><div class="track"><div class="fill" id="fill"></div></div></section>
-<section class="panel section"><div class="head"><div><p class="eyebrow">TODAY'S MOMENT</p><h2>Choose a Promise Petal</h2></div><span class="done" id="done" hidden>Completed today ✓</span></div><div class="petals" id="petals"><button class="petal" data-petal="Hope"><span>🌹</span>Hope</button><button class="petal" data-petal="Peace"><span>🌸</span>Peace</button><button class="petal" data-petal="Joy"><span>🌼</span>Joy</button></div><div class="moment" id="moment" hidden><article class="card promise"><div class="topline"><span id="petalName"></span><span id="ref"></span></div><h3 id="title"></h3><p class="verse" id="promise"></p><p id="reflection"></p></article><div class="twocol"><article class="card"><p class="eyebrow">A TINY PRAYER</p><p id="prayer"></p></article><article class="card"><p class="eyebrow">TODAY'S GRACE STEP</p><p id="challenge"></p></article></div><article class="card"><p class="eyebrow">A LITTLE BIBLE JOY</p><h3 id="question"></h3><div class="answers" id="answers"></div><div class="feedback" id="feedback"></div></article><button class="primary" id="water" disabled>💧 Water My Garden</button><p class="hint" id="hint">Answer the Bible question to water your garden.</p></div><div class="complete" id="complete" hidden><div class="big">🌷</div><h3>Your garden has been tended today.</h3><p>Come back tomorrow for another promise. Grace never rushes you.</p><button class="secondary" id="review">Review Today's Moment</button></div></section>
-<section class="panel section"><p class="eyebrow">BLESSING COLLECTION</p><h2>Thirty little reminders of God's care</h2><div style="height:17px"></div><div class="collection" id="collection"></div></section>
-<section class="panel share"><div><p class="eyebrow">SHARE THE JOY</p><h2>Invite a friend into the garden.</h2><p>Share today's blessing with your Rosy family on Facebook, by text, or anywhere you encourage others.</p></div><button class="secondary" id="share">↗ Share Rosy Minds Garden</button><p class="status" id="status"></p></section>
-<details class="panel about"><summary>About this little garden</summary><div><p><strong>ROSY MINDS GARDEN</strong> is a gentle, Jesus-centered daily experience created for encouragement—not pressure.</p><p>Your progress stays on this device. No account is required, and no personal information is collected.</p><p><strong>Grace is not a streak.</strong> Missing a day never erases your garden.</p><button class="reset" id="reset">Reset my garden on this device</button></div></details>
-</main><footer>Made with faith and tenderness for the Rosy Minds community.<br><strong>ROSY MINDS</strong></footer>
-<div class="modal" id="modal" hidden><div class="backdrop" data-close></div><div class="modalcard"><button class="close" data-close>×</button><div class="reward" id="rewardIcon">🌹</div><p class="eyebrow">TODAY'S BLESSING</p><h2 id="rewardTitle"></h2><p id="rewardText"></p><button class="primary" id="rewardShare">Share This Blessing</button><button class="secondary" data-close>Return to My Garden</button></div></div>
-<script>
-"use strict";
-const KEY="rosyMindsGardenV3",preview=new URLSearchParams(location.search).get("preview")==="30";
-const moments=[
-["Jesus Is Already in the Boat","Mark 4:35–41","The storm may be loud, but it is never louder than the presence of Jesus.","The disciples saw waves and felt fear. Jesus saw the same waves and remained at peace. Let His presence tell your heart what is true.","Jesus, steady my heart and remind me I never face the wind alone. Amen.","Who calmed the wind and waves?",["Peter","Jesus","Moses"],1,"Whisper once today: Jesus is with me here."],
-["Small Faith, Great Savior","Matthew 17:20","You do not need enormous faith; you need an honest heart turned toward an enormous God.","A mustard seed looks small, yet it carries a beginning. Bring Jesus the faith you have today.","Lord, receive my small beginning and grow it in Your hands. Amen.","Jesus compared small faith to which seed?",["Mustard","Apple","Wheat"],0,"Write down one thing you are still trusting Jesus to carry."],
-["He Notices What Others Pass By","Mark 10:46–52","Jesus never treats your cry as an interruption.","People tried to silence Bartimaeus, but Jesus stopped. Your voice is not lost in heaven.","Jesus, thank You for hearing me. Give me courage to call on You. Amen.","What did Bartimaeus ask Jesus to restore?",["Hearing","Sight","Strength"],1,"Give full attention to someone who may feel overlooked."],
-["Ordinary Water Can Become Worship","John 2:1–11","Jesus can bring beauty from what feels plain or unfinished.","At Cana, servants filled jars with water. Jesus handled the transformation.","Lord, use my ordinary efforts for Your good. Amen.","At Cana, Jesus turned what into wine?",["Oil","Water","Milk"],1,"Do one ordinary task today with gratitude."],
-["The Shepherd Still Comes Looking","Luke 15:3–7","You are never too far away to be sought, found, and carried home by Jesus.","The shepherd did not call the missing sheep a lost cause. He went after it.","Good Shepherd, keep my heart close to You. Amen.","How many sheep were left while the shepherd searched?",["Nine","Ninety-nine","One hundred"],1,"Send a kind message to someone you have not heard from lately."],
-["Sit Near Jesus Before You Serve","Luke 10:38–42","Your worth is not measured by how much you finish today.","Mary chose to listen near Jesus. Service becomes lighter when presence comes first.","Jesus, teach me to receive Your presence before I rush. Amen.","Which sister sat at Jesus' feet?",["Martha","Mary","Elizabeth"],1,"Spend one unhurried minute in silence with Jesus."],
-["Jesus Can Bless What You Bring","John 6:1–13","What feels insufficient in your hands is not insufficient in the hands of Jesus.","A small lunch became enough for thousands when it was offered to Christ.","Lord, multiply what I offer for Your good. Amen.","What food was brought before Jesus fed the crowd?",["Five loaves and two fish","Seven loaves and one fish","Two loaves and five fish"],0,"Offer one small act of generosity."],
-["Mercy Meets You on the Road","Luke 10:30–37","Love becomes visible when compassion crosses the road.","The Samaritan moved closer, helped, and stayed involved.","Jesus, make Your mercy visible through me. Amen.","Who cared for the injured traveler?",["A Samaritan","A soldier","A fisherman"],0,"Make someone's day easier in one practical way."],
-["Come Down From the Tree","Luke 19:1–10","Jesus knows your name and enters the places that need changing.","Zacchaeus climbed for a glimpse, but Jesus offered relationship.","Lord, let Your grace reshape my choices. Amen.","Why did Zacchaeus climb a tree?",["To hide","To see Jesus","To pick fruit"],1,"Choose honesty in one small matter."],
-["Peace Walks Through Locked Doors","John 20:19–29","No closed door can keep the risen Jesus from meeting you with peace.","The disciples hid, but Jesus came and spoke peace.","Risen Jesus, enter the rooms fear has closed in me. Amen.","What greeting did Jesus bring?",["Peace be with you","Run quickly","Do not return"],0,"Replace one fearful thought with a prayer for peace."],
-["The Table Has Room","Matthew 9:9–13","Jesus is not embarrassed to sit with people who need grace.","Jesus called Matthew and shared a table with people others judged.","Jesus, keep me humble and welcoming. Amen.","What was Matthew's occupation?",["Carpenter","Tax collector","Shepherd"],1,"Welcome someone with warmth rather than assumptions."],
-["A Touch of Faith Matters","Mark 5:25–34","Jesus sees the trembling hand that reaches toward Him in faith.","In a pressing crowd, one woman reached for Jesus with hope.","Jesus, I reach toward You with what I cannot fix alone. Amen.","What did the woman touch?",["The edge of His garment","His sandal","A basket"],0,"Bring one hidden worry honestly to Jesus."],
-["Look Up From the Dust","John 8:1–11","Jesus offers truth without humiliation and grace without pretending sin does not matter.","His grace lifts our faces and redirects our steps.","Lord, thank You for mercy that restores dignity. Amen.","What did Jesus do while the accusers questioned Him?",["Wrote on the ground","Climbed a hill","Entered a boat"],0,"Refuse to repeat a judgmental comment today."],
-["The Empty Tomb Changed Everything","John 20:1–18","Because Jesus lives, sorrow never has the final word.","Mary came carrying grief and left carrying resurrection news.","Living Jesus, awaken hope in me. Amen.","Who recognized Jesus when He called her name?",["Mary Magdalene","Martha","Lydia"],0,"Speak one hope-filled sentence to someone discouraged."],
-["The Vine Supplies the Branch","John 15:1–8","You were never meant to produce spiritual fruit by exhausting yourself.","A branch bears fruit by remaining connected to the vine.","Jesus, keep me close to You. Amen.","Jesus said, I am the vine; you are the what?",["Roots","Branches","Leaves"],1,"Ask before one decision: Does this keep me close to Jesus?"],
-["There Is Bread for Today","John 6:35","Jesus meets the deepest hunger of the heart.","Temporary things distract, but they cannot sustain the soul.","Jesus, Bread of Life, draw my heart back to You. Amen.","Jesus called Himself the Bread of what?",["Life","Morning","Harvest"],0,"Trade five minutes of scrolling for five minutes with Jesus."],
-["Let the Children Come","Mark 10:13–16","Jesus welcomes trusting hearts and tender faith.","He drew the children near and blessed them.","Lord, restore simple trust and wonder in me. Amen.","What did Jesus do for the children?",["Blessed them","Ignored them","Sent them away"],0,"Notice something beautiful and thank Jesus for it."],
-["Your Name Is Known","John 10:1–18","The Good Shepherd knows His sheep personally.","You are not a number to Jesus. His leadership is marked by recognition and care.","Good Shepherd, tune my heart to Your voice. Amen.","What does the Good Shepherd do?",["Lays down His life","Forgets their names","Leaves them unguarded"],0,"Remind yourself: Jesus knows me and calls me His."],
-["One Thank-You Can Turn You Around","Luke 17:11–19","Gratitude helps the heart recognize both the gift and the Giver.","Ten were healed, but one returned to thank Jesus.","Jesus, make gratitude my first response. Amen.","How many returned to thank Jesus?",["One","Five","Ten"],0,"Thank God for one blessing you often overlook."],
-["Jesus Knows How to Wash Feet","John 13:1–17","In the kingdom of Jesus, greatness kneels low enough to serve.","The One with all authority wrapped Himself in a towel.","Humble Savior, teach me to serve without needing applause. Amen.","What did Jesus wash?",["The disciples' feet","Their hands","Their clothing"],0,"Quietly do one helpful thing that may never be noticed."],
-["The Stone Can Move","John 11:1–44","Jesus can speak life into places you have labeled finished.","Even at Lazarus's tomb, Jesus was not too late.","Jesus, speak renewed hope into my heart. Amen.","Whom did Jesus call from the tomb?",["Lazarus","Nicodemus","Andrew"],0,"Pray again for one situation you stopped bringing to Jesus."],
-["A Lamp for the Next Step","Psalm 119:105","God often gives enough light for the next step, not the entire road.","Faith walks with the light it has instead of demanding the whole map.","Lord, guide my next step and help me trust Your pace. Amen.","God's word is described as a lamp to what?",["My feet","My house","My city"],0,"Take the next faithful step you already know to take."],
-["The Father Runs Toward Home","Luke 15:11–24","Repentance does not meet a locked door in the Father's house.","The father saw his returning son from far away and ran to him.","Father, draw me home wherever I have wandered. Amen.","What did the father do when he saw his son?",["Ran to him","Turned away","Sent a servant"],0,"Offer forgiveness without making someone earn your kindness."],
-["The Net Can Be Cast Again","Luke 5:1–11","Yesterday's empty net does not decide what Jesus can do today.","The fishermen were tired, but they obeyed Christ's invitation to try again.","Jesus, give me courage to obey after disappointment. Amen.","What happened when they let down the nets?",["They caught many fish","The boat disappeared","The water dried up"],0,"Try one good thing again without letting yesterday define it."],
-["A Quiet Place Is Holy Too","Mark 1:35","Jesus made room for prayer before the day's demands grew loud.","Silence with God is not wasted time; it is where the heart is re-centered.","Jesus, teach me to seek the Father before the noise. Amen.","When did Jesus go to a solitary place to pray?",["Very early in the morning","At noon","After midnight only"],0,"Create two quiet minutes before checking your next notification."],
-["The Widow's Gift Was Seen","Mark 12:41–44","Heaven measures generosity differently than crowds do.","Jesus noticed a gift that looked small because He saw the sacrifice and love within it.","Lord, receive what I give with a sincere heart. Amen.","What did the widow place in the offering?",["Two small coins","A gold cup","Five loaves"],0,"Give something today with no need to be noticed."],
-["The Road to Emmaus Was Not Empty","Luke 24:13–35","Jesus may be nearer than your disappointment allows you to recognize.","He walked with the travelers before they understood who was beside them.","Jesus, open my eyes to Your presence on this road. Amen.","When did they recognize Jesus?",["When He broke bread","At the city gate","When it began to rain"],0,"Look back and name one place God was present before you noticed."],
-["The Well Became a Witness","John 4:4–30","Jesus meets people honestly and sends them forward with a new story.","The Samaritan woman left her water jar and told others about Christ.","Jesus, redeem my story and use it to point others toward You. Amen.","Where did Jesus speak with the Samaritan woman?",["At a well","In a boat","On a mountain"],0,"Share one simple sentence about what Jesus has done for you."],
-["The Last Word Is Love","John 21:15–19","Failure does not prevent Jesus from restoring purpose.","After Peter's denial, Jesus met him with questions of love and a renewed calling.","Jesus, restore what shame tries to silence in me. Amen.","What did Jesus ask Peter three times?",["Do you love Me?","Where is your boat?","Why are you afraid?"],0,"Choose one loving action that reflects the person Jesus is restoring you to be."],
-["A Little Chapel Has Bloomed","Revelation 21:3–5","Every faithful day points toward the day God makes all things new.","Your completed garden is not a trophy for perfection. It is a collection of thirty small returns to Jesus.","Jesus, thank You for meeting me day by day. Keep this garden growing in my heart. Amen.","What does God promise to make new?",["All things","Only gardens","Only cities"],0,"Celebrate quietly, then invite someone else to begin a daily moment with Jesus."]
-];
-const blessings=["Rose of Hope","Lily of Peace","Grace Butterfly","Faithful Sparrow","Joyful Hummingbird","Promise Lantern","Mercy Blossom","Courage Daisy","Kindness Vine","Prayer Pearl","Gentle Rain","Morning Light","Quiet Strength","Open Hands","Steady Heart","Bread of Life","Childlike Wonder","Shepherd's Bell","Thankful Song","Servant Towel","Resurrection Bloom","Guiding Lamp","Homecoming Rose","Full Net","Quiet Morning","Widow's Coin","Emmaus Flame","Living Water","Restored Heart","Chapel of Grace"],icons=["🌹","🌷","🦋","🐦","🌺","🏮","🌸","🌼","🌿","🤍","💧","☀️","🌳","🙌","💗","🍞","✨","🔔","🎵","🕊️","🌻","🪔","🏡","🐟","🌅","🪙","🔥","💦","💖","⛪"],flowerIcons=["🌹","🌷","🌸","🌼","🌺","🌻"];
-const today=()=>{let d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`},defaultState=()=>({completed:[],collected:[],petals:{}}),previewState=()=>{let completed=[];for(let i=29;i>=0;i--){let d=new Date();d.setDate(d.getDate()-i);completed.push(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`)}return{completed,collected:[...Array(30).keys()],petals:{[today()]:"Hope"}}};
-let state=preview?previewState():load(),chosen=state.petals[today()]||null,solved=false,deferred=null,current=moments[(Math.floor((new Date()-new Date(new Date().getFullYear(),0,0))/86400000)-1)%30];
-function load(){try{return{...defaultState(),...JSON.parse(localStorage.getItem(KEY)||"{}")}}catch{return defaultState()}}function save(){if(!preview)localStorage.setItem(KEY,JSON.stringify(state))}function completeToday(){return state.completed.includes(today())}
-const $=s=>document.getElementById(s);function render(){$("date").textContent=new Intl.DateTimeFormat(undefined,{weekday:"long",month:"long",day:"numeric"}).format(new Date());$("days").textContent=state.completed.length;let n=state.collected.length;$("count").textContent=n;$("fill").style.width=`${n/30*100}%`;let level=n>=30?["Chapel Garden","A little place of worship has bloomed."]:n>=21?["Sparrow Meadow","Even the sparrows feel at home here."]:n>=14?["Fountain of Peace","Peace is flowing through your growing garden."]:n>=7?["Grace Gate Garden","Grace has opened the garden gate."]:n?["First Blooms","Something beautiful has begun."]:["Seedling Garden","Your first flower is waiting."];$("level").textContent=level[0];$("message").textContent=level[1];$("next").textContent=n<7?`Next: Grace butterflies at 7 (${7-n} to go)`:n<14?`Next: Peace fountain at 14 (${14-n} to go)`:n<21?`Next: Faithful sparrow at 21 (${21-n} to go)`:n<30?`Next: Little white chapel at 30 (${30-n} to go)`:"Your first garden is beautifully complete.";$("chapel").classList.toggle("on",n>=30);$("fountain").classList.toggle("on",n>=14);$("b1").classList.toggle("on",n>=7);$("b2").classList.toggle("on",n>=18);$("bird").classList.toggle("on",n>=21);renderFlowers(n);renderCollection(n);let done=completeToday();$("done").hidden=!done;$("petals").hidden=done||!!chosen;$("moment").hidden=done||!chosen;$("complete").hidden=!done;if(chosen&&!done)showMoment()}
-function renderFlowers(n){let box=$("flowers");box.innerHTML="";let xs=[7,17,28,39,51,63,74,84,92];for(let i=0;i<n;i++){let f=document.createElement("span");f.className="flower";f.textContent=flowerIcons[i%6];f.style.left=`${Math.max(3,Math.min(93,xs[i%9]+(i*7%5)-2))}%`;f.style.bottom=`${10+Math.floor(i/9)*10+(i*11%5)}%`;f.style.animationDelay=`${Math.min(i*35,600)}ms`;box.appendChild(f)}}function renderCollection(n){let box=$("collection");box.innerHTML="";for(let i=0;i<30;i++){let t=document.createElement("div");t.className="token"+(i<n?" on":"");t.innerHTML=`${i<n?icons[i]:"•"}<small>${i+1}</small>`;t.title=i<n?blessings[i]:`Blessing ${i+1} is locked`;box.appendChild(t)}}
-function selectPetal(p){chosen=p;state.petals[today()]=p;save();$("petals").hidden=true;$("moment").hidden=false;showMoment();$("moment").scrollIntoView({behavior:"smooth",block:"start"})}function showMoment(){$("petalName").textContent=`${chosen} Petal`;$("ref").textContent=current[1];$("title").textContent=current[0];$("promise").textContent=current[2];$("reflection").textContent=current[3];$("prayer").textContent=current[4];$("question").textContent=current[5];$("challenge").textContent=current[8];$("answers").innerHTML="";current[6].forEach((o,i)=>{let b=document.createElement("button");b.className="answer";b.textContent=o;b.onclick=()=>answer(i,b);$("answers").appendChild(b)});$("feedback").textContent="";$("water").disabled=true;$("hint").textContent="Answer the Bible question to water your garden.";solved=false}
-function answer(i,b){if(solved)return;solved=true;[...$("answers").children].forEach((x,j)=>{x.disabled=true;if(j===current[7])x.classList.add("correct")});if(i!==current[7])b.classList.add("wrong");$("feedback").textContent=i===current[7]?"Beautiful! That is correct.":`Good try. The correct answer is ${current[6][current[7]]}.`;$("water").disabled=false;$("hint").textContent="Your garden is ready for today's water."}
-function water(){if(completeToday())return;state.completed.push(today());let idx=Math.min(state.collected.length,29);if(!state.collected.includes(idx))state.collected.push(idx);save();render();openReward(idx)}function openReward(i){$("rewardIcon").textContent=icons[i];$("rewardTitle").textContent=blessings[i];$("rewardText").textContent=i===29?"Your thirty daily moments have grown into a completed Chapel Garden. Keep returning to Jesus—not from pressure, but from love.":`You collected the ${blessings[i]}. May it remind you that Jesus meets you in small, faithful moments.`;$("modal").hidden=false}function closeModal(){$("modal").hidden=true}
-async function share(reward=false){let i=Math.max(0,state.collected.length-1),text=reward?`Today I collected the ${blessings[i]} in ROSY MINDS GARDEN: A Daily Moment with Jesus. 🌹`:`Come spend a gentle daily moment with Jesus in ROSY MINDS GARDEN. 🌹`,data={title:"ROSY MINDS GARDEN",text,url:location.href.replace(/\?preview=30/,"")};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(`${text} ${data.url}`);$("status").textContent="The message and link were copied."}}catch(e){if(e.name!=="AbortError")$("status").textContent="Use your browser's Share button to send the garden link."}}
-function install(){if(deferred){deferred.prompt();deferred=null}else{alert("On iPhone: tap Safari's Share button, then choose Add to Home Screen. On Android: open the browser menu and choose Install app or Add to Home screen.")}}function reset(){if(preview){alert("This is the verified 30-day preview. Open the regular app to use your personal garden.");return}if(confirm("Reset all garden progress stored on this device?")){localStorage.removeItem(KEY);state=defaultState();chosen=null;render()}}
-$("petals").addEventListener("click",e=>{let b=e.target.closest("[data-petal]");if(b)selectPetal(b.dataset.petal)});$("water").onclick=water;$("review").onclick=()=>{chosen=state.petals[today()]||"Hope";$("complete").hidden=true;$("moment").hidden=false;showMoment()};$("share").onclick=()=>share(false);$("rewardShare").onclick=()=>share(true);$("install").onclick=install;$("reset").onclick=reset;document.querySelectorAll("[data-close]").forEach(x=>x.onclick=closeModal);window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e});if("serviceWorker" in navigator&&location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));render();
-</script>
+  <a class="skip-link" href="#dailyMoment">Skip to today’s moment</a>
+
+  <header class="app-header">
+    <div class="brand-lockup" aria-label="Rosy Minds Garden">
+      <span class="brand-mark" aria-hidden="true">🌹</span>
+      <div>
+        <p class="eyebrow">ROSY MINDS</p>
+        <h1>GARDEN</h1>
+        <p class="tagline">A Daily Moment with Jesus</p>
+      </div>
+    </div>
+    <button id="installButton" class="icon-button install-button" type="button" hidden aria-label="Install Rosy Minds Garden">
+      <span aria-hidden="true">＋</span> Add to Home Screen
+    </button>
+  </header>
+
+  <main>
+    <section class="welcome-card panel" aria-labelledby="welcomeTitle">
+      <div>
+        <p class="date-line" id="todayDate"></p>
+        <h2 id="welcomeTitle">Welcome to your quiet garden.</h2>
+        <p>Spend one joyful minute with Jesus, collect a new blessing, and watch your garden grow.</p>
+      </div>
+      <div class="rhythm-badge" aria-label="Your gentle rhythm">
+        <span class="rhythm-number" id="visitCount">0</span>
+        <span class="rhythm-label">days tended</span>
+      </div>
+    </section>
+
+    <section class="garden-panel panel" aria-labelledby="gardenTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR FAITH GARDEN</p>
+          <h2 id="gardenTitle">Every small visit helps something bloom.</h2>
+        </div>
+        <p class="garden-level" id="gardenLevel">Seedling Garden</p>
+      </div>
+
+      <div id="gardenScene" class="garden-scene" role="img" aria-label="A peaceful garden that grows as daily moments are completed">
+        <div class="sky-glow"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="sun" aria-hidden="true"></div>
+        <div class="chapel" aria-hidden="true">
+          <div class="chapel-roof"></div>
+          <div class="chapel-body">
+            <div class="chapel-window">✝</div>
+            <div class="chapel-door"></div>
+          </div>
+        </div>
+        <div class="fountain" aria-hidden="true">
+          <div class="water-drop">•</div>
+          <div class="fountain-bowl"></div>
+          <div class="fountain-base"></div>
+        </div>
+        <div class="garden-path"></div>
+        <div class="grass grass-back"></div>
+        <div class="flowers" id="flowerBed" aria-hidden="true"></div>
+        <div class="butterfly butterfly-one" aria-hidden="true">🦋</div>
+        <div class="butterfly butterfly-two" aria-hidden="true">🦋</div>
+        <div class="sparrow" aria-hidden="true">🐦</div>
+        <div class="grass grass-front"></div>
+        <div class="garden-message" id="gardenMessage">Your first flower is waiting.</div>
+      </div>
+
+      <div class="progress-wrap" aria-label="Garden progress">
+        <div class="progress-copy">
+          <span><strong id="bloomCount">0</strong> of 30 blessings collected</span>
+          <span id="nextMilestone">Next: open the garden gate at 7</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dailyMoment" class="daily-panel panel" aria-labelledby="dailyTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TODAY’S MOMENT</p>
+          <h2 id="dailyTitle">Choose a Promise Petal</h2>
+        </div>
+        <span id="completionBadge" class="completion-badge" hidden>Completed today ✓</span>
+      </div>
+
+      <div id="petalPicker" class="petal-picker" role="group" aria-label="Choose one promise petal">
+        <button class="petal-button petal-rose" type="button" data-petal="Hope">
+          <span class="petal-icon" aria-hidden="true">🌹</span>
+          <span>Hope</span>
+        </button>
+        <button class="petal-button petal-lavender" type="button" data-petal="Peace">
+          <span class="petal-icon" aria-hidden="true">🌸</span>
+          <span>Peace</span>
+        </button>
+        <button class="petal-button petal-gold" type="button" data-petal="Joy">
+          <span class="petal-icon" aria-hidden="true">🌼</span>
+          <span>Joy</span>
+        </button>
+      </div>
+
+      <div id="momentContent" class="moment-content" hidden>
+        <article class="promise-card">
+          <div class="promise-topline">
+            <span id="chosenPetal" class="petal-label"></span>
+            <span id="scriptureRef" class="scripture-ref"></span>
+          </div>
+          <h3 id="promiseTitle"></h3>
+          <p id="promiseText" class="promise-text"></p>
+          <p id="reflectionText" class="reflection-text"></p>
+        </article>
+
+        <article class="prayer-card">
+          <div class="card-icon" aria-hidden="true">🙏</div>
+          <div>
+            <p class="eyebrow">A TINY PRAYER</p>
+            <p id="prayerText"></p>
+          </div>
+        </article>
+
+        <article class="quiz-card">
+          <p class="eyebrow">A LITTLE BIBLE JOY</p>
+          <h3 id="quizQuestion"></h3>
+          <div id="quizOptions" class="quiz-options"></div>
+          <div id="quizFeedback" class="quiz-feedback" role="status" aria-live="polite"></div>
+        </article>
+
+        <article class="challenge-card">
+          <div class="card-icon" aria-hidden="true">💗</div>
+          <div>
+            <p class="eyebrow">TODAY’S GRACE STEP</p>
+            <p id="challengeText"></p>
+          </div>
+        </article>
+
+        <button id="waterButton" class="primary-button water-button" type="button" disabled>
+          <span aria-hidden="true">💧</span> Water My Garden
+        </button>
+        <p id="waterHint" class="button-hint">Answer the Bible question to water your garden.</p>
+      </div>
+
+      <div id="alreadyComplete" class="already-complete" hidden>
+        <span class="complete-flower" aria-hidden="true">🌷</span>
+        <h3>Your garden has been tended today.</h3>
+        <p>Come back tomorrow for another promise. Grace never rushes you.</p>
+        <button id="reviewMomentButton" class="secondary-button" type="button">Review Today’s Moment</button>
+      </div>
+    </section>
+
+    <section class="collection-panel panel" aria-labelledby="collectionTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BLESSING COLLECTION</p>
+          <h2 id="collectionTitle">Thirty little reminders of God’s care</h2>
+        </div>
+      </div>
+      <div id="collectionGrid" class="collection-grid" aria-label="Collected blessings"></div>
+    </section>
+
+    <section class="share-panel panel" aria-labelledby="shareTitle">
+      <div>
+        <p class="eyebrow">STAY CONNECTED</p>
+        <h2 id="shareTitle">Visit Rosy Minds on Facebook.</h2>
+        <p>Open the official Rosy Minds Facebook Page for daily encouragement, prayers, and new garden updates.</p>
+      </div>
+      <button id="shareButton" class="secondary-button" type="button">
+        <span aria-hidden="true">↗</span> Open Rosy Minds Facebook Page
+      </button>
+      <p id="shareStatus" class="share-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <details class="about-panel panel">
+      <summary>About this little garden</summary>
+      <div class="about-content">
+        <p><strong>ROSY MINDS GARDEN</strong> is a gentle, Jesus-centered daily experience created for encouragement—not pressure.</p>
+        <p>Your progress stays on this device. The app does not require an account and does not collect your name, email, prayer requests, or personal information.</p>
+        <p class="grace-note">Missing a day never erases your garden. Grace is not a streak.</p>
+        <button id="resetButton" class="text-button" type="button">Reset my garden on this device</button>
+      </div>
+    </details>
+  </main>
+
+  <footer>
+    <p>Made with faith and tenderness for the Rosy Minds community.</p>
+    <p class="footer-mark">ROSY MINDS</p>
+  </footer>
+
+  <div id="rewardModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="rewardTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+      <div class="reward-sparkles" aria-hidden="true">✦ ✧ ✦</div>
+      <div id="rewardIcon" class="reward-icon" aria-hidden="true">🌹</div>
+      <p class="eyebrow">TODAY’S BLESSING</p>
+      <h2 id="rewardTitle"></h2>
+      <p id="rewardMessage"></p>
+      <button id="rewardShareButton" class="primary-button" type="button">Share This Blessing</button>
+      <button class="secondary-button" type="button" data-close-modal>Return to My Garden</button>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="noscript-message">Please turn on JavaScript to grow your Rosy Minds Garden.</div>
+  </noscript>
+
+  <script src="app.js" defer></script>
+  <script src="facebook-page-patch.js" defer></script>
 </body>
 </html>
